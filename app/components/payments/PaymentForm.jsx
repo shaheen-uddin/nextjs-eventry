@@ -2,7 +2,7 @@ import React from "react";
 
 export default function PaymentForm() {
   return (
-    <htmlForm>
+    <form>
       <div className="my-4 space-y-2">
         <label htmlFor="name" className="block">
           Name
@@ -64,6 +64,6 @@ export default function PaymentForm() {
       >
         Pay Now
       </button>
-    </htmlForm>
+    </form>
   );
 }

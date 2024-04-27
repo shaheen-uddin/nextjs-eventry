@@ -25,9 +25,9 @@ export default function EventCard({ event }) {
             </Link>
             <p className="text-[#9C9C9C] text-sm mt-1">{event.location}</p>
             <div className="text-[#737373] text-sm mt-1">
-              <span>1k Interested</span>
+              <span>{event?.interested_ids.length} Interested</span>
               <span>|</span>
-              <span>40K Going</span>
+              <span>{event?.going_ids} Going</span>
             </div>
 
             <ActionButtons />

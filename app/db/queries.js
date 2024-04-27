@@ -1,4 +1,6 @@
 import { eventModel } from "../models/event-models";
+import { userModel } from "../models/user-model";
+
 async function getAllEvents() {
   const allEvents = await eventModel.find();
   return allEvents;
@@ -8,4 +10,15 @@ async function getEventById(id) {
   const event = await eventModel.findById(id);
   return event;
 }
-export { getAllEvents, getEventById };
+
+async function createUser(user) {
+  return await userModel.create(user);
+}
+
+async function findUserByCredentials(credentials) {
+  console.log(credentials);
+  const user = await userModel.findOne(credentials);
+  console.log(user);
+  return user;
+}
+export { getAllEvents, getEventById, createUser, findUserByCredentials };
