@@ -1,10 +1,12 @@
 "use client";
 
 import { performLogin } from "@/app/actions";
+import useAuth from "@/app/hooks/useAuth";
 import { useState } from "react";
 
 export default function LoginForm() {
   const [error, setError] = useState("");
+  const { setAuth } = useAuth();
 
   async function onSubmit(evt) {
     evt.preventDefault();

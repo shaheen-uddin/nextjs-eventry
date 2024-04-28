@@ -16,9 +16,12 @@ async function createUser(user) {
 }
 
 async function findUserByCredentials(credentials) {
-  console.log(credentials);
+  //console.log(credentials);
   const user = await userModel.findOne(credentials);
   console.log(user);
-  return user;
+  if (user) {
+    return user;
+  }
+  return null;
 }
 export { getAllEvents, getEventById, createUser, findUserByCredentials };
